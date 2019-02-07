@@ -29,8 +29,9 @@ getCommitsInARow = async (username) => {
         let a = moment(dates[index], 'YYYY-MM-DD');
         let b = moment(dates[index+1], 'YYYY-MM-DD');
         const dif = a.diff(b,'days');
-        if(dif > 1)
-            return amount;
+        if(dif > 1){
+            amount++;
+            return amount;}
         else if(dif === 1)
             amount++;
     }
